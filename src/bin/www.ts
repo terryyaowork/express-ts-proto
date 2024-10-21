@@ -24,7 +24,7 @@ const normalizePort = (val: string) => {
  * Event listener for HTTP server "error" event.
  */
 
-const onError = (error: any) => {
+const onError = (error: NodeJS.ErrnoException) => {
   if (error.syscall !== 'listen') {
     throw error;
   }
